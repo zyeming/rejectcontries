@@ -1,0 +1,26 @@
+# The name of your plugin as displayed in the Plugins Catalog web UI.
+displayName: RejectCountries Plugin
+
+# For now, `middleware` is the only type available.
+type: middleware
+
+# The import path of your plugin.
+import: github.com/traefik/plugindemo
+
+# A brief description of what your plugin is doing.
+summary: A Traefik plugin that rejects requests from specific countries using GeoIP2 database and returns a static response.
+
+# Configuration data for your plugin.
+# This is mandatory,
+# and Plugins Catalog will try to execute the plugin with the data you provide as part of its startup validity tests.
+testData:
+  dbPath: "/mmdb/GeoLite2-Country.mmdb"
+  preferXForwardedForHeader: true
+  matchCountries:
+    - "GB"
+  staticResponse:
+    statusCode: 200
+    headers:
+      Content-Type: "text/plain; charset=utf-8"
+    body: |
+      You do not have access to this function
