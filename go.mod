@@ -1,4 +1,4 @@
-module github.com/traefik/rejectcontries
+module github.com/zyeming/rejectcontries
 
 go 1.19
 
