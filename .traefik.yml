@@ -5,7 +5,7 @@ displayName: RejectCountries Plugin
 type: middleware
 
 # The import path of your plugin.
-import: github.com/traefik/plugindemo
+import: github.com/zyeming/rejectcontries
 
 # A brief description of what your plugin is doing.
 summary: A Traefik plugin that rejects requests from specific countries using GeoIP2 database and returns a static response.
